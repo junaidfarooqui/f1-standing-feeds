@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formula 1 Standing Feeds</title>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="F1StandingFeeds" ng-controller="driversController">
+<div class="wrapper panel panel-default">
+  <div class="logo"> <img src="img/f1-logo.jpg"> </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>Driver Standings {{seasonName}}</h1>
+      <div class="form-group col-lg-6">
+        <label>Search Driver</label>
+        <input type="text" class="form-control input-md" ng-model="nameFilter" placeholder="Search..."/>
+      </div>
+      <div class="form-group col-lg-6">
+        <label>Select Season</label>
+        <select ng-change="F1s_SelectionChanged()" ng-model="F1s_Selection" class="form-control input-md" ng-options="year as year for year in years | orderBy:year track by year">
+        </select>
+      </div>
+      <table id="f1_Feeds" class="table table-striped table-bordered table-condensed camplist">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Points</th>
+            <th>Wins</th>
+            <th>Constructor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="driver in driversList | filter: searchFilter" class="standing-{{driver.position}}">
+            <td class="standingPosition">{{driver.position}}</td>
+            <td><img ng-src="./img/flags/{{driver.Driver.nationality}}.png" alt="{{driver.Driver.nationality}}" /> {{driver.Driver.givenName}} {{driver.Driver.familyName}}</td>
+            <td>{{driver.Driver.code}}</td>
+            <td>{{driver.points}}</td>
+            <td>{{driver.wins}}</td>
+            <td><img ng-src="./img/flags/{{driver.Constructors[0].nationality}}.png" alt="{{driver.Constructors[0].nationality}}" /> {{driver.Constructors[0].name}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg-12 text-center">Copyright {{currentYear}}</div>
+</div>
+<script src="js/angular.js"></script> 
+<script src="js/scripts.js"></script>
+</body>
+</html>
