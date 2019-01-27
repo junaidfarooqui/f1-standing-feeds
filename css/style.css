@@ -30,22 +30,20 @@ body {
 .camplist {
 	width: 100%
 }
-#f1_Feeds {
-}
 
-#f1_Feeds tbody tr td {
+.table tbody tr td {
 	vertical-align: middle
 }
 
-#f1_Feeds tbody tr.standing-1 {
+.table tbody tr.standing-1 {
 	background: #FFFFB9;
 }
 
-#f1_Feeds tbody tr.standing-1 td:first-child {
+.table tbody tr.standing-1 td:first-child {
 	position: relative;
 }
 
-#f1_Feeds tbody tr.standing-1 td:first-child:before {
+.table tbody tr.standing-1 td:first-child:before {
 	content: "";
 	height: 25px;
 	width: 55px;
