@@ -1,12 +1,52 @@
 /* Style.css stylesheet */
-body{background:url(../img/background.jpg) no-repeat; background-size:cover;}
-.wrapper{width:768px; margin:0 auto; padding:15px 25px 25px 25px;box-shadow: 0px 5px 10px #333}
-.logo{width:250px; margin:0 auto}
-.logo img{width:100%;}
-.camplist{width:100%}
+body {
+	background: url(../img/background.jpg) no-repeat;
+	background-size: cover;
+}
 
-#f1_Feeds{}
-#f1_Feeds tbody tr td{vertical-align:middle}
-#f1_Feeds tbody tr.standing-1{ background:#FFFFB9;}
-#f1_Feeds tbody tr.standing-1 td:first-child{position:relative;}
-#f1_Feeds tbody tr.standing-1 td:first-child:before{content:""; height:25px; width:55px; background:url(../img/winner.gif) no-repeat; background-size:contain; position:absolute; top:9px; left:25px; z-index:100}
+.wrapper {
+	width: 768px;
+	margin: 0 auto;
+	padding: 15px 25px 25px 25px;
+	box-shadow: 0px 5px 10px #333
+}
+
+.logo {
+	width: 250px;
+	margin: 0 auto
+}
+
+.logo img {
+	width: 100%;
+}
+
+.camplist {
+	width: 100%
+}
+
+#f1_Feeds {
+}
+
+#f1_Feeds tbody tr td {
+	vertical-align: middle
+}
+
+#f1_Feeds tbody tr.standing-1 {
+	background: #FFFFB9;
+}
+
+#f1_Feeds tbody tr.standing-1 td:first-child {
+	position: relative;
+}
+
+#f1_Feeds tbody tr.standing-1 td:first-child:before {
+	content: "";
+	height: 25px;
+	width: 55px;
+	background: url(../img/winner.gif) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 9px;
+	left: 25px;
+	z-index: 100
+}
