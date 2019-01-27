@@ -9,6 +9,7 @@ body {
 	transform: translate(-50%, 0%);
 	height: 100%;
 	top:10px;
+	overflow-y: scroll;
 }
 .wrapper {
 	width: 768px;
@@ -29,7 +30,6 @@ body {
 .camplist {
 	width: 100%
 }
-
 #f1_Feeds {
 }
 
