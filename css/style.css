@@ -3,12 +3,18 @@ body {
 	background: url(../img/background.jpg) no-repeat;
 	background-size: cover;
 }
-
+.center {
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 100%;
+	top:10px;
+}
 .wrapper {
 	width: 768px;
 	margin: 0 auto;
 	padding: 15px 25px 25px 25px;
-	box-shadow: 0px 5px 10px #333
+	box-shadow: 0 5px 10px #333
 }
 
 .logo {
